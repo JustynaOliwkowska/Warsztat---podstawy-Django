@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new classroom</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+          integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+</head>
+<body>
+<form class="pure-form" method="POST">
+    <fieldset>
+        <legend>Add new classroom</legend>
+         <p>{{ message }}</p>
+         <label>
+        Classroom name: <input type="text" name="name">
+        </label>
+        <label>
+        Classroom capacity from 30 to 100 ppl: <input type="text" name="capacity">
+         </label>
+         <select name="projector">
+            <option value="">--Projector availability choose True or False--</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <button type="submit" class="pure-button pure-button-primary">Send</button>
+    </fieldset>
+    {% csrf_token %}
+</form></body>
+</html>

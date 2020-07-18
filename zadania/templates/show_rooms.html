@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show classrooms</title>
+</head>
+<body>
+    <h1>Classrooms</h1>
+    <p>{{ message }}</p>
+    <ol>
+    {% for room in rooms %}
+        <li> Classroom name: <a href="/room/{{ room.id }}">{{ room.name }}</a>
+            -- Capacity: {{ room.capacity }} -- Projector availability: {{ room.projector}}
+            <a href="/room/modify/{{room.id}}">EDIT ROOM</a>-- <a href="/room/delete/{{room.id}}">REMOVE ROOM</a>--
+            <a href="/room/reserve/{{room.id}}">RESERVE ROOM</a>
+            <a href="/room/details/{{room.id}}">ROOM DETAILS</a></a> </li><br>
+    {% endfor %}
+    </ol><br>
+    <a href="/room/new">ADD ROOM</a>
+
+</body>
+</html>

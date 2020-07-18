@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show classrooms</title>
+</head>
+<body>
+    <h1>Select room to be deleted</h1>
+       <p>{{ message }}</p>
+    <ol>
+    {% for room in rooms %}
+        <li> Room number: {{ room.id }} Room name: {{ room.name }}  <a href="{{room.name}}">REMOVE</a> </li><br>
+    {% endfor %}
+    </ol><br>
+
+
+</body>
+</html>

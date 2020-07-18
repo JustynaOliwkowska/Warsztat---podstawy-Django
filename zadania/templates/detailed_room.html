@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show classrooms details</title>
+</head>
+<body>
+    <h1>Classrooms details</h1>
+    <h2>Nazwa sali: {{ room.name }}</h2>
+    <p>Pojemność sali: {{ room.capacity }}</p>
+    <ol>
+    {% for reservation in reservations %}
+   <li>{{ reservation.date }} -- {{ reservation.comment }}  </li><br>
+    {% endfor %}
+
+</body>
+</html>
