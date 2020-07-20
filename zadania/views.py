@@ -62,16 +62,9 @@ def room(request):
 
 def delete_room(request, id):
     if request.method == 'GET':
-        return render(request, 'show_rooms.html',)
-
-    if request.method == 'POST':
         del_room = Classroom.objects.get(id=id)
-        # del_room = request.POST.get('id')
-        # del_room = Classroom.objects.get('name')
         del_room.delete()
-        # del_room.save()
-        # z.Classroom.remove(del_room)
-        # z.save()
+
     message = 'Room removed successfully'
     return render(request, 'show_rooms.html', context={'message': message})
 
